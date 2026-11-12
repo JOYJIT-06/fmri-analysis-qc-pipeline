@@ -1,0 +1,12 @@
+nibabel>=5.2.1
+nilearn>=0.10.3
+numpy>=1.22.4
+pandas>=1.4.2
+matplotlib>=3.5.1
+plotly>=5.6.0
+scipy>=1.8.0
+pyyaml>=6.0
+tqdm>=4.64.0
+scikit-learn>=1.0.2
+reportlab>=4.1.0
+scikit-image>=0.19.2

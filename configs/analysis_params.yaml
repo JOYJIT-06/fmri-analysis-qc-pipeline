@@ -1,0 +1,20 @@
+global:
+  clinical_disclaimer: 'DISCLAIMER: This software is for research/portfolio purposes
+    only and is not clinically validated for patient diagnostics.'
+  dataset_name: synthetic_demo_subject
+  random_seed: 42
+  subject_id: sub-01
+machine_learning:
+  cv_folds: 5
+  test_size: 0.2
+paths:
+  figures_dir: figures
+  processed_data_dir: data/processed
+  qc_results_dir: results/qc
+  raw_data_dir: data/raw
+preprocessing:
+  fwhm_smoothing_mm: 6.0
+  highpass_freq_hz: 0.01
+qc_thresholds:
+  dvars_threshold_pct: 1.5
+  fd_threshold_mm: 0.5

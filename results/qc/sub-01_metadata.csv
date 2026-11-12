@@ -1,0 +1,2 @@
+shape,ndim,voxel_sizes_mm,tr_sec,datatype
+"(30, 30, 30, 80)",4,"[np.float32(3.0), np.float32(3.0), np.float32(3.0)]",1.0,float32

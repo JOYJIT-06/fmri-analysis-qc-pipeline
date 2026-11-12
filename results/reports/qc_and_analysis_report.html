@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fMRI QC and Analysis Executive Portfolio Report</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f8f9fa; color: #2D3748; margin: 0; padding: 40px; }
+        header { border-bottom: 3px solid #3182CE; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #2B6CB0; margin: 0; font-size: 32px; }
+        h2 { color: #2D3748; border-bottom: 1px solid #E2E8F0; padding-bottom: 5px; margin-top: 30px; }
+        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 25px 0; }
+        .stat-card { background: white; padding: 20px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .stat-label { font-size: 14px; color: #718096; text-transform: uppercase; font-weight: bold; }
+        .stat-val { font-size: 26px; font-weight: bold; color: #48BB78; margin-top: 5px; }
+        .img-container { text-align: center; background: white; padding: 20px; border-radius: 8px; border: 1px solid #E2E8F0; margin-top: 15px; }
+        img { max-width: 100%; height: auto; border-radius: 4px; }
+        .disclaimer { background-color: #FFF5F5; color: #C53030; padding: 15px; border-left: 5px solid #E53E3E; border-radius: 4px; font-size: 13px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>fMRI End-to-End Analysis & QC Executive Dashboard</h1>
+        <p style="color: #718096; margin-top: 5px;">Subject Identifier: <strong>sub-01</strong> | Run Condition: <strong>task-rest</strong></p>
+    </header>
+
+    <section>
+        <h2>1. Temporal Signal-to-Noise Ratio & Quality Assessment</h2>
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-label">Mean Global tSNR</div>
+                <div class="stat-val">7.37</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Mean Framewise Displacement</div>
+                <div class="stat-val">0.5949 mm</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Max Movement Spike</div>
+                <div class="stat-val">1.2752 mm</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">ML Task Decode Accuracy</div>
+                <div class="stat-val">45.0%</div>
+            </div>
+        </div>
+        <div class="img-container">
+            <h3>Pre-processed Realignment Parameters & Framewise QC Timeseries</h3>
+            <img src="../../figures/qc_metrics_timeseries.png" alt="Motion QC Timeseries Plot">
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Functional Task Activation (First-Level GLM Contrast Map)</h2>
+        <p>Estimation contrasts active temporal blocks against rest periods. Hotter voxels denote strong task compliance.</p>
+        <div class="img-container">
+            <img src="../../figures/glm_contrast_map.png" alt="GLM Contrast Map">
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Target Region Functional Connectivity Map</h2>
+        <p>Cross-correlation matrices calculated over target default mode network coordinate seeds.</p>
+        <div class="img-container">
+            <img src="../../figures/functional_connectivity.png" alt="Functional Connectivity Heatmap">
+        </div>
+    </section>
+
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> This software project and pipeline output metrics are intended exclusively for academic study, research validation, or portfolio demonstration, and are not validated for actual diagnostic use in clinic settings.
+    </div>
+</body>
+</html>
