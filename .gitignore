@@ -1,0 +1,55 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging and build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test and coverage output
+.coverage
+.coverage.*
+htmlcov/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Neuroimaging data and derived outputs
+# Keep large/private scans and generated results out of version control.
+*.nii
+*.nii.gz
+*.img
+*.hdr
+*.mgz
+*.mgh
+*.gii
+*.dcm
+*.nii.gz.*
+/data/
+/rawdata/
+/derivatives/
+/results/
+/figures/
